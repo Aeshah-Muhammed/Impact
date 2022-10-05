@@ -5,6 +5,7 @@
 }
 body {
   scroll-behavior: smooth;
+ 
 }
 
 .topbar {
@@ -62,8 +63,8 @@ header {
   background-color: #008374;
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px;
   position: fixed;
+  padding:30px 130px;
 }
 h1 {
   color: #fff;
@@ -80,7 +81,8 @@ span {
 .navbar > a {
   text-decoration: none;
   color: #ffffffb3;
-  margin: 20px;
+  margin: 15px;
+  padding: 10px;
 }
 .navbar > a:hover {
   border-bottom: 3px solid #f96f59;
@@ -93,21 +95,21 @@ span {
   display: flex;
   background-color: #008374;
   color: #fff;
-  padding: 90px 0 0 0;
-  height: 100vh;
+  padding: 170px 130px;
+  gap: 25px;
 }
 .wallpaperText {
-  padding: 60px;
+  padding-top: 70px;
 }
 .wallpaperText > h2 {
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .wallpaperText > p {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .wallpaperBtn {
   text-decoration: none;
@@ -134,14 +136,16 @@ span {
 }
 .allIcon {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 150px;
+  padding: 0 130px;
 }
 .wallpaperIcons {
   background-color: #00796b;
-  margin: 20px;
-  padding: 10px 150px 150px 50px;
-  margin-top: -90px;
+  margin: -90px  5px 0 ;
+  padding: 50px;
+  
   text-align: center;
   border-radius: 5px;
 }
@@ -156,6 +160,9 @@ span {
 /* wallpaper ends */
 
 /* about  */
+.about {
+  padding-top: 120px;
+}
 
 .aboutLine {
   display: flex;
@@ -168,15 +175,14 @@ span {
   line-height: 1.2;
   padding-bottom: 10px;
 }
+.aboutLine>p {
+  padding: 20px;
+}
 .line {
   width: 50px;
   height: 3px;
   background-color: #00796b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 10px;
-  text-align: center;
 }
 .aboutLine > p {
   color: #6f6f6f;
@@ -185,8 +191,8 @@ span {
 }
 .aboutsection {
   display: flex;
-  justify-content: center;
-  padding: 60px;
+  padding: 30px 130px;
+  gap: 70px;
 }
 .aboutright > h3 {
   font-weight: 700;
@@ -196,7 +202,7 @@ span {
 }
 .aboutrightImg {
   height: 450px;
-  width: 400px;
+  width: 500px;
 }
 .aboutrightImg > img {
   height: 100%;
@@ -222,8 +228,8 @@ span {
   line-height: 1.2;
 }
 .aboutleftImg {
-  height: 400px;
-  width: 400px;
+  height: 450px;
+  width: 500px;
 }
 .aboutleftImg > img {
   height: 100%;
@@ -242,7 +248,7 @@ li {
   padding-top: 20px;
 }
 .paragraph2 {
-  padding: 20px 0 20px 0;
+  padding-bottom: 20px;
 }
 /* about ends  */
 
@@ -250,8 +256,8 @@ li {
 
 .logos {
   display: flex;
-  margin: 20px;
-  justify-content: space-around;
+  padding: 60px 130px;
+  justify-content: space-between;
 }
 .logo {
   height: 55px;
@@ -261,12 +267,13 @@ li {
   height: 100%;
   width: 100%;
 }
+.logo > img:hover {
+  transform: scaleX(1.07);
+}
 .client {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  padding: 20px;
 }
 .clientImg {
   height: 400px;
@@ -275,15 +282,14 @@ li {
 .clientImg > img {
   height: 100%;
   width: 100%;
+  margin-left: -140px;
 }
-.clientTexts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 .clientText {
   border-bottom: 1px solid #e4e4e4;
   padding: 20px 0;
+  margin-left: -110px;
+
 }
 .clientText > p > span {
   max-width: 90px;
@@ -347,8 +353,8 @@ li {
 
 .services {
   background-color: #f6f6f6;
-  padding: 60px 0;
-  margin-top: 30px;
+  margin-top: 50px;
+  padding-top: 50px;
 }
 .serviceLine {
   display: flex;
@@ -364,19 +370,20 @@ li {
 .serviceLine > p {
   color: #6f6f6f;
   font-size: 20px;
+  padding: 10px 0;
+
 }
 .serviceTexts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
+  padding:50px 130px ;
+  gap: 20px;
+
 }
-.serviceText {
-  margin: 20px;
-}
+
 .serviceText {
   max-width: 500px;
   border: 1px solid #f8f9fa;
-  flex: 0 0 auto;
   cursor: pointer;
   padding: 40px;
   background-color: #fff;
@@ -397,13 +404,12 @@ li {
 .serviceText > p {
   padding-bottom: 10px;
   max-width: 250px;
-  line-height: 20px;
+  line-height: 25px;
   font-size: 14px;
   margin-bottom: 0;
 }
 .serviceText > a {
   text-decoration: none;
-  margin-top: 15px;
   color: #008374;
 }
 /* services ends  */
@@ -412,8 +418,7 @@ li {
 
 .testimonial {
   background-color: #fff;
-  padding: 60px 0;
-  margin-top: 30px;
+  padding-top: 50px;
 }
 .testimonialLine {
   display: flex;
@@ -429,11 +434,12 @@ li {
 .testimonialLine > p {
   color: #6f6f6f;
   font-size: 20px;
+  padding-top: 10px;
 }
 .testimonialWrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 60px;
+ padding: 60px 130px;
 }
 .eachTestimonial {
   padding: 30px;
@@ -490,8 +496,8 @@ li {
 
 .portfolio {
   background-color: #f6f6f6;
-  padding: 60px 0;
-  margin-top: 30px;
+  margin-top: 50px;
+  padding: 50px 0;
 }
 .portfolioLine {
   display: flex;
@@ -507,6 +513,11 @@ li {
 .porfolioLine > p {
   color: #6f6f6f;
   font-size: 20px;
+  padding-top: 10px;
+}
+.portfolioLink {
+  padding-top: 40px;
+
 }
 .portfolioLink > ul > li {
   list-style: none;
@@ -524,12 +535,16 @@ li {
 .portfolioLink > ul > li > a:hover {
   color: #008374;
 }
+.portfolioLink > ul > li.green > a {
+  color: #008374;
+
+}
 .portfolioWrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding: 60px 130px;
 }
 .eachporfolio {
-  padding: 30px;
   margin: 15px;
 }
 .portfolioImage {
@@ -545,8 +560,7 @@ li {
   transition: 0.5s;
 }
 .portfolioImage > img:hover {
-  transform: scaleX(1.2);
-  transform: scaleY(1.2);
+  transform: scaleX(1.05);
 }
 .portfolio-info {
   padding: 25px 20px;
@@ -579,8 +593,7 @@ li {
 
 .team {
   background-color: #fff;
-  padding: 60px 0;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .teamLine {
   display: flex;
@@ -596,22 +609,24 @@ li {
 .teamLine > p {
   color: #6f6f6f;
   font-size: 20px;
+  padding-top: 10px;
 }
 .teamWrap {
   display: flex;
   justify-content: space-between;
-  margin: 25px;
+  margin: 60px 130px;
+
 }
 .eachTeam {
   padding: 30px;
-  margin: 15px;
+  margin: 10px;
   box-shadow: 0px 0 15px rgb(0 0 0 / 10%);
   background-color: #fff;
   border-radius: 10px;
 }
 .teamImg {
   height: 230px;
-  width: 230px;
+  width: 100%;
 }
 .teamImg > img {
   height: 100%;
@@ -634,33 +649,33 @@ li {
   font-size: 14px;
   padding-top: 5px;
 }
-.teamIcon {
-  height: 0px;
-  width: 15px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+.all-teamIcon {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  gap: 20px;
+  margin-top: 15px;
+ 
 }
-.teamIcon > li {
-  list-style: none;
+.teamIcon {
+  border-radius: 50%;
+  border: 1px solid #6c757d;
+  padding: 5px;
+}
+.teamIcon>img {
+  display: flex;
+  height: 20px;
 }
 
-.teamIcon > img {
-  height: 100%;
-  width: 100%;
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
+
+
 /* team ends  */
 
 /* pricing  */
 
 .pricing {
   background-color: #f6f6f6;
-  padding: 60px 0;
   margin-top: 30px;
+  padding: 50px 0;
+
 }
 .pricingLine {
   display: flex;
@@ -676,16 +691,15 @@ li {
 .pricingLine > p {
   color: #6f6f6f;
   font-size: 20px;
+  padding-top: 10px;
 }
 .pricingWrap {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 25px;
+  margin: 60px 130px;
 }
 .eachPricing {
   max-width: 100%;
-  padding: 60px 40px;
+  padding: 60px 80px;
   box-shadow: 0 3px 20px -2px rgb(108 117 125 / 15%);
   background-color: #fff;
   height: 100%;
@@ -749,9 +763,9 @@ li {
 
 .faqWrap {
   display: flex;
-  margin: 30px;
   justify-content: center;
-  padding-top: 20px;
+  margin-top: 30px;
+  padding: 50px 0;
   gap: 80px;
 }
 
@@ -775,9 +789,11 @@ li {
   max-width: 100%;
 }
 
-.faq-item > h3 > button {
+.faq-title {
+  display: flex;
+  gap: 20px;
   border-radius: 0;
-  padding: 20px 50px 20px 20px;
+  padding: 20px 90px 20px 20px;
   font-weight: 600;
   border: 0;
   font-size: 18px;
@@ -788,11 +804,42 @@ li {
   box-shadow: 0px 0 15px rgb(0 0 0 / 7%);
   cursor: pointer;
 }
-.faq-item > h3 > button > span {
+.faq-title > h3 > span {
   padding-right: 10px;
   font-size: 20px;
   color: #00796b;
   font-weight: 600;
+}
+.faq-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  
+}
+.faq-question {
+  display: none;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 18px;
+}
+.show-text .faq-question {
+  display: block;
+}
+.faq-btn >:hover {
+  transform: rotate(180deg);
+}
+.angle-down>img, .angle-up>img {
+height: 20px;
+}
+.angle-down {
+  display: none;
+}
+.show-text .angle-down {
+  display: inline;
+}
+.show-text .angle-up {
+  display: none;
 }
 /* faq ends  */
 
@@ -800,8 +847,8 @@ li {
 
 .blog {
   background-color: #f6f6f6;
-  padding: 60px 0;
   margin-top: 30px;
+  padding: 50px 0;
 }
 .blogLine {
   display: flex;
@@ -817,12 +864,11 @@ li {
 .blogLine > p {
   color: #6f6f6f;
   font-size: 20px;
+  padding-bottom: 10px;
 }
 .blogWrap {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+  margin: 60px 130px;
 }
 .eachBlog {
   padding: 20px;
@@ -834,7 +880,6 @@ li {
 }
 .blogImg {
   height: 250px;
-  width: 350px;
 }
 
 .blogImg > img {
@@ -847,15 +892,17 @@ li {
   font-size: 16px;
   color: #6f6f6f;
   margin: 10px 0 10px;
+  margin: 10px 10px 10px 8px;
+  padding: 15px 10px 0 0;
 }
 .blogIcon {
   height: 50px;
-  width: 40px;
+  width: 50px;
 }
 .blogIcon > img {
   height: 100%;
   width: 100%;
-  border-radius: 50px;
+  border-radius: 60%;
 }
 .eachBlog > h4 > a {
   transition: 0.3s;
@@ -864,16 +911,26 @@ li {
   font-weight: 700;
   line-height: 1.2;
 }
+.eachBlog  > h2 {
+  padding-bottom: 20px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.eachBlog  > h2:hover {
+  color: #00796b;
+}
 .all-blogIcon {
   display: flex;
   align-items: center;
+  padding-bottom: 20px;
 }
 .blog-author {
   padding-left: 20px;
+ 
 }
 .blogName {
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .post-date {
   font-size: 14px;
@@ -882,12 +939,14 @@ li {
 /* blog ends  */
 
 /* contact  */
+
 .contact {
   background-color: #fff;
-  padding: 60px 0;
   margin-top: 30px;
+  padding: 50px 0;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .contactLine {
   display: flex;
@@ -902,13 +961,12 @@ li {
 }
 .contactLine > p {
   color: #6f6f6f;
-  font-size: 20px;
+  font-size: 18px;
+ padding-top: 10px;
 }
 .contactWrap {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+  padding: 5px 130px;
 }
 .contactRight {
   background-color: #00796b;
@@ -916,35 +974,34 @@ li {
   padding: 20px;
   border-radius: 10px 0 0 10px;
   box-shadow: 0px 2px 25px rgb(0 0 0 / 10%);
-  margin-left: -190px;
+  width: 50%;
 }
 .eachContact-right {
-  width: 100%;
   background-color: #009282;
   margin-bottom: 20px;
-  padding: 10px 75px 10px 20px;
+  padding: 0px 75px 10px 40px;
   border-radius: 10px;
   color: #fff;
 }
 .contactText > h4 {
-  padding: 0;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom:10px;
   line-height: 1.2;
 }
 .contactText > p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
+  margin-bottom: 10px;
 }
 .contactLeft {
   background-color: #fff;
   box-shadow: 0px 2px 25px rgb(0 0 0 / 10%);
   border-radius: 0 10px 10px 0;
-  margin-left: 30px;
+  width: 100%;
+  padding: 20px;
+
 }
-input {
+
+input, textarea {
   padding: 12px 15px;
   border-radius: 0;
   box-shadow: none;
@@ -954,20 +1011,17 @@ input {
   line-height: 1.5;
   color: #212529;
   background-color: #fff;
-  background-clip: padding-box;
   border: 1px solid #ced4da;
+  outline-color: #00796b;
+}
+
+
+.input {
+  display: flex;
+  gap: 10px;
 }
 textarea {
-  padding: 10px 12px;
-  border-radius: none;
-  font-size: 14px;
-  width: 100%;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
+  height: 200px;
 }
 .contact-btn > button {
   background-color: #00796b;
@@ -977,6 +1031,8 @@ textarea {
   transition: 0.4s;
   border-radius: 50px;
   cursor: pointer;
+  display: flex;
+  margin: auto;
 }
 /* contact ends  */
 
@@ -986,13 +1042,62 @@ footer {
   background-color: #008374;
   color: #fff;
   margin-top: 40px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: white;
+  padding-bottom: 30px;
 }
 
+.footer {
+  display: flex;
+  padding: 30px 130px;
+  justify-content: space-between;
+}
+.fisrt-row>h1, .second-row >h3, .third-row >h3, .fourth-row>h3 {
+padding-bottom: 10px;
+}
+.fisrt-row > P {
+  max-width: 400px;
+padding-bottom: 10px;
+line-height: 1.2;
+}
+.footer-icon {
+  display: flex;
+  gap: 20px;
+}
+.eachfooter-icon {
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 5px;
+}
+.eachfooter-icon>img {
+  height: 20px;
+  display: flex;
+}
+.footer-links>ul>li {
+  list-style: none;
+}
+.footer-links>ul>li > a{
+text-decoration: none;
+color:rgba(255, 255, 255, 0.6
+);
+}
+.footer-links>ul>li > a:hover{
+ color: #fff;
+  }
+  .fourth-row>li, .phone-email>li {
+    list-style: none;
+   }
+  .phone-email {
+    padding-top: 10px;
+  }
+  .phone-email>li>span {
+    color: #fff;
+    font-weight: 700;
+  }
+  .copyright {
+  text-align: center;
+  padding-bottom: 20px;
+
+  }
 .copyright > span {
   font-weight: bolder;
   color: white;
