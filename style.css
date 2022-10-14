@@ -527,15 +527,16 @@ li {
   font-weight: 500;
   line-height: 1;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
-.portfolioLink > ul > li > a {
+.portfolioLink > ul > li  {
   text-decoration: none;
   color: #000;
 }
-.portfolioLink > ul > li > a:hover {
+.portfolioLink > ul > li:hover {
   color: #008374;
 }
-.portfolioLink > ul > li.green > a {
+.portfolioLink > ul > li.green  {
   color: #008374;
 
 }
@@ -704,6 +705,7 @@ li {
   background-color: #fff;
   height: 100%;
   border-radius: 15px;
+ 
 }
 .pricing-item > h3 {
   font-weight: 600;
@@ -756,6 +758,8 @@ li {
   border: 3px solid #00796b;
   border-radius: 15px;
 }
+
+
 
 /* pricing ends  */
 

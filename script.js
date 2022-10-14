@@ -231,6 +231,335 @@ function nextContent(){
 
 
 
+// porfolio 
+const allPortfolio = [
+    {
+        id : 1,
+        
+        portfolioImg : "Assets/portfolio/app-1.jpg",
+        type : 'app',
+        portfolioName : "App 1",
+        portfolioText : "Lorem ipsum dolor sit amet.", 
+
+    },
+    {
+        id : 2,
+        portfolioImg : "Assets/portfolio/product-1.jpg",
+        type: 'product',
+        portfolioName : "Product 1",
+        portfolioText : "Lorem ipsum dolor sit amet.", 
+
+    },
+    {
+        id : 3,
+        portfolioImg : "Assets/portfolio/branding-1.jpg",
+        type: 'branding',
+        portfolioName : "Branding 1",
+        portfolioText : "Lorem ipsum dolor sit amet.", 
+
+    },
+    {
+        id : 4,
+        portfolioImg : "Assets/portfolio/books-1.jpg",
+        type: 'book',
+        portfolioName : "Book 1",
+        portfolioText : "Lorem ipsum dolor sit amet.", 
+
+    },
+    {
+        id : 5,
+        portfolioImg : "Assets/portfolio/app-2.jpg",
+        type : 'app',
+        portfolioName : "App 2",
+        portfolioText : "Lorem ipsum dolor sit amet.",
+
+    },
+    {
+        id : 6,
+        portfolioImg : "Assets/portfolio/product-2.jpg",
+        type: 'product',
+        portfolioName : "Product 2",
+        portfolioText : "Lorem ipsum dolor sit amet.",
+
+    },
+    {
+        id : 7,
+        portfolioImg : "Assets/portfolio/branding-2.jpg",
+        type: 'branding',
+        portfolioName : "Branding 2",
+        portfolioText : "Lorem ipsum dolor sit amet.",
+
+    },
+    {
+        id : 8,
+        portfolioImg : "Assets/portfolio/books-2.jpg",
+        type: 'book',
+        portfolioName : "Book 2",
+        portfolioText : "Lorem ipsum dolor sit amet.",
+
+    },
+    {
+        id : 9,
+        
+        portfolioImg : "Assets/portfolio/app-3.jpg",
+        type : 'app',
+        portfolioName : "App 3",
+        portfolioText : "Lorem ipsum dolor sit amet.",
+
+    },
+    {
+        id : 10,
+        portfolioImg : "Assets/portfolio/product-3.jpg",
+        type: 'product',
+        portfolioName : "Product 3",
+        portfolioText : "Lorem ipsum dolor sit amet.",
+
+    },
+    {
+        id : 11,
+        portfolioImg : "Assets/portfolio/branding-3.jpg",
+        type: 'branding',
+        portfolioName :"Branding 3",
+        portfolioText : "Lorem ipsum dolor sit amet.",
+
+    },
+    {
+        id : 12,
+        portfolioImg :"Assets/portfolio/books-3.jpg",
+        type: 'book',
+        portfolioName : "Book 3",
+        portfolioText : "Lorem ipsum dolor sit amet.",
+
+    },
+];
+
+
+
+
+
+const portfolioWrap =  document.querySelector(".portfolioWrap");
+
+
+// let all = 'allporfolio'
+const allproduct = document.querySelector(".green");
+const apps = document.querySelector(".app");
+const books = document.querySelector(".book");
+const products = document.querySelector(".product");
+const brandings = document.querySelector(".branding");
+
+
+
+const maplist = allPortfolio.map((items, id) => 
+   
+    
+
+        `   <div class="eachporfolio">
+        <div class="portfolioImage">
+          <img src=${items.portfolioImg} alt="">
+        </div>
+        <div class="portfolio-info">
+          <h4>
+            <a href="">${items.portfolioName}</a>
+          </h4>
+          <p>${items.portfolioText}</p>
+
+        </div>
+                 </div>`
+
+ )
+
+ 
+
+maplist.forEach(function(i){
+   const workLiTag = document.createElement("div");
+   workLiTag.innerHTML = i;
+   document.querySelector(".portfolioWrap").appendChild(workLiTag);
+ })
+
+allproduct.addEventListener('click', allproductfilter)
+ books.addEventListener('click', bookfilter)
+ apps.addEventListener('click', appfilter)
+ products.addEventListener('click', productfilter)
+ brandings.addEventListener('click', brandingfilter)
+ 
+ function allproductfilter() {
+    
+    document.querySelector(".portfolioWrap").innerHTML = '';
+
+    const maplist = allPortfolio.map((items, id) => 
+   
+    
+
+    `   <div class="eachporfolio">
+    <div class="portfolioImage">
+      <img src=${items.portfolioImg} alt="">
+    </div>
+    <div class="portfolio-info">
+      <h4>
+        <a href="">${items.portfolioName}</a>
+      </h4>
+      <p>${items.portfolioText}</p>
+
+    </div>
+             </div>`
+
+)
+
+
+
+maplist.forEach(function(i){
+const workLiTag = document.createElement("div");
+workLiTag.innerHTML = i;
+document.querySelector(".portfolioWrap").appendChild(workLiTag);
+})
+}
+function appfilter() {
+
+    document.querySelector(".portfolioWrap").innerHTML = '';
+
+    const filterlist = allPortfolio.filter((items, id) => items.type === 'app')
+
+    
+
+    const filterlisthtml = filterlist.map((items, id) => 
+   
+    
+
+    `   <div class="eachporfolio">
+    <div class="portfolioImage">
+      <img src=${items.portfolioImg} alt="">
+    </div>
+    <div class="portfolio-info">
+      <h4>
+        <a href="">${items.portfolioName}</a>
+      </h4>
+      <p>${items.portfolioText}</p>
+
+    </div>
+             </div>`
+
+)
+
+filterlisthtml.forEach(function(i){
+const workLiTag = document.createElement("div");
+workLiTag.innerHTML = i;
+document.querySelector(".portfolioWrap").appendChild(workLiTag);
+})
+
+}
+
+function bookfilter() {
+
+    document.querySelector(".portfolioWrap").innerHTML = '';
+
+    const filterlist = allPortfolio.filter((items, id) => items.type === 'book')
+
+    
+
+    const filterlisthtml = filterlist.map((items, id) => 
+   
+    
+
+    `   <div class="eachporfolio">
+    <div class="portfolioImage">
+      <img src=${items.portfolioImg} alt="">
+    </div>
+    <div class="portfolio-info">
+      <h4>
+        <a href="">${items.portfolioName}</a>
+      </h4>
+      <p>${items.portfolioText}</p>
+
+    </div>
+             </div>`
+
+)
+
+filterlisthtml.forEach(function(i){
+const workLiTag = document.createElement("div");
+workLiTag.innerHTML = i;
+document.querySelector(".portfolioWrap").appendChild(workLiTag);
+})
+
+}
+function productfilter() {
+
+    document.querySelector(".portfolioWrap").innerHTML = '';
+
+    const filterlist = allPortfolio.filter((items, id) => items.type === 'product')
+
+    
+
+    const filterlisthtml = filterlist.map((items, id) => 
+   
+    
+
+    `   <div class="eachporfolio">
+    <div class="portfolioImage">
+      <img src=${items.portfolioImg} alt="">
+    </div>
+    <div class="portfolio-info">
+      <h4>
+        <a href="">${items.portfolioName}</a>
+      </h4>
+      <p>${items.portfolioText}</p>
+
+    </div>
+             </div>`
+
+)
+
+filterlisthtml.forEach(function(i){
+const workLiTag = document.createElement("div");
+workLiTag.innerHTML = i;
+document.querySelector(".portfolioWrap").appendChild(workLiTag);
+})
+
+}
+function brandingfilter() {
+
+    document.querySelector(".portfolioWrap").innerHTML = '';
+
+    const filterlist = allPortfolio.filter((items, id) => items.type === 'branding')
+
+    
+
+    const filterlisthtml = filterlist.map((items, id) => 
+   
+    
+
+    `   <div class="eachporfolio">
+    <div class="portfolioImage">
+      <img src=${items.portfolioImg} alt="">
+    </div>
+    <div class="portfolio-info">
+      <h4>
+        <a href="">${items.portfolioName}</a>
+      </h4>
+      <p>${items.portfolioText}</p>
+
+    </div>
+             </div>`
+
+)
+
+filterlisthtml.forEach(function(i){
+const workLiTag = document.createElement("div");
+workLiTag.innerHTML = i;
+document.querySelector(".portfolioWrap").appendChild(workLiTag);
+})
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 // faq 
@@ -253,4 +582,40 @@ faqItem.forEach(function(e) {
 });
 
 
+// pricing 
+const firstPricing = document.getElementById("first-pricing");
+const middlePricing = document.querySelector(".pricing-itemFeatured");
+const lastPricing = document.getElementById("last-pricing");
 
+
+firstPricing.addEventListener('click', function() {
+
+    firstPricing.style.borderColor = 'green'
+    firstPricing.style.borderWidth = 5
+    firstPricing.style.borderStyle = 'solid'
+    firstPricing.style.borderRadius = '15px'
+    lastPricing.style.border = 'none'
+    middlePricing.style.border = 'none'
+
+
+})
+lastPricing.addEventListener('click', function() {
+
+    lastPricing.style.borderColor = 'green'
+    lastPricing.style.borderWidth = 5
+    lastPricing.style.borderStyle = 'solid'
+    lastPricing.style.borderRadius = '15px'
+    firstPricing.style.border = 'none'
+    middlePricing.style.border = 'none'
+})
+middlePricing.addEventListener('click', function() {
+
+    middlePricing.style.borderColor = 'green'
+    middlePricing.style.borderWidth = 5
+    middlePricing.style.borderStyle = 'solid'
+    middlePricing.style.borderRadius = '15px'
+    lastPricing.style.border = 'none'
+    firstPricing.style.border = 'none'
+
+
+})
