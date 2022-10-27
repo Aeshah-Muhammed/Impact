@@ -2,13 +2,16 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
 }
 body {
   scroll-behavior: smooth;
+
  
 }
 
-.topbar {
+/* .topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,15 +59,17 @@ body {
 .icons {
   height: 30px;
   width: 15px;
-}
+} */
 header {
+  position: relative;
   height: 90px;
   width: 100%;
   background-color: #008374;
   display: flex;
   justify-content: space-between;
   position: fixed;
-  padding:30px 130px;
+  padding:30px 30px;
+ 
 }
 h1 {
   color: #fff;
@@ -91,11 +96,55 @@ span {
   border-bottom: 3px solid #f96f59;
   color: #ffffff;
 }
+.bar, .cancel {
+  display: none;
+}
+.bar > img {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 9999;
+  height: 25px;
+  cursor: pointer;
+}
+.cancel > img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  height: 25px;
+  cursor: pointer;
+}
+
+.side-solid {
+  position: absolute;
+  background-color: #00796b;
+  right: 0px;
+  top: 0px;
+height: 100vh;
+width: 250px;
+padding-top: 35px;
+display: none;
+}
+.side-solid > a {
+  display: flex;
+  padding: 15px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+
+}
+.side-solid > a:hover {
+  color:#fff;
+
+}
+.side-solid > .active2 {
+  color: #fff;
+}
 .wallpaper {
   display: flex;
   background-color: #008374;
   color: #fff;
-  padding: 170px 130px;
+  padding: 170px 30px;
   gap: 25px;
 }
 .wallpaperText {
@@ -139,7 +188,7 @@ span {
   justify-content: space-between;
   width: 100%;
   height: 150px;
-  padding: 0 130px;
+  padding: 0 30px;
 }
 .wallpaperIcons {
   background-color: #00796b;
@@ -200,11 +249,11 @@ span {
   margin-bottom: 20px;
   line-height: 1.2;
 }
-.aboutrightImg {
+.aboutrightImg, .aboutleftImg {
   height: 450px;
   width: 500px;
 }
-.aboutrightImg > img {
+.aboutrightImg > img, .aboutleftImg > img  {
   height: 100%;
   width: 100%;
   border-radius: 15px;
@@ -227,15 +276,6 @@ span {
   margin-bottom: 20px;
   line-height: 1.2;
 }
-.aboutleftImg {
-  height: 450px;
-  width: 500px;
-}
-.aboutleftImg > img {
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-}
 
 ul {
   padding: 10px 0 10px 0;
@@ -256,7 +296,7 @@ li {
 
 .logos {
   display: flex;
-  padding: 60px 130px;
+  padding: 30px 130px;
   justify-content: space-between;
 }
 .logo {
@@ -274,25 +314,30 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 30px 130px;
 }
 .clientImg {
   height: 400px;
-  width: 600px;
+  width: 50%;
 }
 .clientImg > img {
   height: 100%;
   width: 100%;
-  margin-left: -140px;
+  /* margin-left: -140px; */
+}
+
+.clientTexts {
+  width: 50%;
 }
 
 .clientText {
   border-bottom: 1px solid #e4e4e4;
   padding: 20px 0;
-  margin-left: -110px;
+  /* width: 50%; */
 
 }
 .clientText > p > span {
-  max-width: 90px;
+  /* max-width: 90px; */
   padding-right: 15px;
   font-size: 40px;
   font-weight: 700;
@@ -376,7 +421,7 @@ li {
 .serviceTexts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding:50px 130px ;
+  padding: 30px 130px;
   gap: 20px;
 
 }
@@ -439,7 +484,8 @@ li {
 .testimonialWrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
- padding: 60px 130px;
+  padding: 30px 130px;
+
 }
 .eachTestimonial {
   padding: 30px;
@@ -543,14 +589,15 @@ li {
 .portfolioWrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 60px 130px;
+  padding: 30px 130px;
+
 }
 .eachporfolio {
   margin: 15px;
 }
 .portfolioImage {
   height: 250px;
-  width: 350px;
+  /* width: 350px; */
 }
 
 .portfolioImage > img {
@@ -615,7 +662,8 @@ li {
 .teamWrap {
   display: flex;
   justify-content: space-between;
-  margin: 60px 130px;
+  padding: 30px 130px;
+
 
 }
 .eachTeam {
@@ -696,7 +744,8 @@ li {
 }
 .pricingWrap {
   display: flex;
-  margin: 60px 130px;
+  padding: 30px 130px;
+
 }
 .eachPricing {
   max-width: 100%;
@@ -772,7 +821,9 @@ li {
   padding: 50px 0;
   gap: 80px;
 }
-
+#h3 > li {
+list-style: none;
+}
 .faqRight > h3 {
   font-weight: 400;
   font-size: 34px;
@@ -787,6 +838,9 @@ li {
   color: #6c757d;
   max-width: 200px;
   line-height: 2;
+}
+#faq-p2 {
+  display: none;
 }
 .faqLeft {
   width: 100%;
@@ -872,7 +926,8 @@ height: 20px;
 }
 .blogWrap {
   display: flex;
-  margin: 60px 130px;
+  padding: 30px 130px;
+
 }
 .eachBlog {
   padding: 20px;
@@ -970,7 +1025,8 @@ height: 20px;
 }
 .contactWrap {
   display: flex;
-  padding: 5px 130px;
+  padding: 30px 130px;
+
 }
 .contactRight {
   background-color: #00796b;
@@ -1114,4 +1170,439 @@ color:rgba(255, 255, 255, 0.6
 .designBy > a {
   text-decoration: none;
   color: #fff;
+}
+
+
+/* media screen  */
+@media (max-width:1279px) {
+  header {
+  padding:30px;
+  /* position: fixed;
+  height: 10%; */
+
+  }
+  .navbar {
+    display: none;
+  }
+  .bar {
+    display: block;
+
+  }
+  .wallpaper {
+    /* padding: 170px 30px; */
+  
+  }
+  .aboutsection, .footer  {
+    padding: 30px;
+  }
+  .serviceTexts {
+    padding:50px 30px ;
+   
+  }
+  .testimonialWrap, .portfolioWrap, .teamWrap, .pricingWrap,  .blogWrap {
+   padding: 60px 30px;
+  }
+ .contactWrap {
+    padding: 5px 30px;
+  }
+}
+@media (max-width:1199px) {
+  .allIcon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 800px;
+    height: 150px;
+    padding: 0 30px 30px 30px;
+   place-items: center;
+   position: absolute;
+   left: 50%;
+   right: 50%;
+   transform: translate(-50%, -50%);
+  }
+  .wallpaperIcons {
+    
+    background-color: #00796b;
+    /* margin: -150px  5px 0 ; */
+    margin: -350px  3px 20px ;
+
+    /* padding: 50px; */
+  }
+
+  header {
+    padding:25px;
+   
+  
+    }
+    .wallpaper {
+      /* padding: 170px 30px; */
+    
+    }
+    .aboutsection, .footer  {
+      /* padding: 100px; */
+      padding: 70px;
+    }
+    .testimonialWrap, .portfolioWrap, .teamWrap, .pricingWrap,  .blogWrap, .logos, .serviceTexts {
+     padding: 30px 100px;
+    }
+   .contactWrap {
+      padding: 5px 100px;
+    }
+
+}
+@media (max-width:991px) {
+  .wallpaper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .aboutsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    /* padding: 30px; */
+    /* padding: 150px; */
+    /* gap: 70px; */
+  }
+  .aboutrightImg {
+    width: 700px;
+  }
+  .aboutleftImg  {
+   /* width: 700px; */
+  }
+  .logos {
+    display: flex;
+    /* padding: 60px 30px; */
+justify-content: center;
+gap: 70px;
+  }
+  .logo {
+    /* height: 55px; */
+    width: 140px;
+  } 
+  #hide-logo {
+display: none;
+  }
+  .client {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-bottom: 80px;
+  }
+  .clientImg {
+    /* width: 700px; */
+    width: 100%;
+  }  
+  .clientTexts {
+    width: 100%;
+  }
+  
+  .callToAction {
+    height: 43vh;
+    width: 70vw;
+  }
+  .serviceTexts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonialWrap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #eachTestimonial-hide {
+    display: none;
+  }
+  .portfolioWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* padding: 60px 30px; */
+  }
+  .teamWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* margin: 60px 30px */
+  
+  }
+  .pricingWrap {
+    display: flex;
+   flex-direction: column;
+  }
+ #first-pricing, .pricing-itemFeatured {
+    margin-bottom: 30px;
+
+  }
+  .pricing-link {
+    padding: 10px 40px;
+    border-radius: 50px;
+    color: #008374;
+    border: 1px solid rgba(0, 131, 116, 0.2);
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none;
+    /* position: absolute;
+    left: 50%;
+    right: 50%;
+   transform: translate(-50%, -50%); */
+
+  }
+  .faqWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding:25px; */
+padding: 0px;
+  }
+#h3{
+  display: flex;
+  gap: 2px;
+}
+#faq-p1 {
+  display: none;
+}
+#faq-p2 {
+  display: flex;
+}
+.faqRight > p {
+  max-width: 800px;
+  line-height: 2;
+}
+  .faqRight > p {
+    font-size: 15px;
+    color: #6c757d;
+    
+    line-height: 2;
+  }
+  .blogWrap {
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+  }
+  .contactWrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactRight {
+    width: 100%;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30px 30px; */
+
+    /* justify-content: space-between; */
+  }
+  .usefulLink-services {
+    padding-top:20px ;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .fisrt-row>h1, .second-row >h3, .third-row >h3, .fourth-row>h3 {
+  padding-bottom: 10px;
+  }
+}
+@media (max-width:767px) {
+  .allIcon {
+    display: grid;
+    gap: 20px;
+    width: 400px;
+    height: 150px;
+    padding: 0px;
+  }
+  .logo {
+    height: 30px;
+    width: 80px;
+  } 
+
+  .client {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+  .clientImg {
+    /* width: 600px; */
+  }
+ 
+  .callToAction {
+    height: 100vh;
+    width: 70vw;
+  }
+  .serviceTexts,  .portfolioWrap, .teamWrap,  .blogWrap {
+   display: flex;
+   flex-direction: column;
+   
+  }
+  .portfolioImage {
+    height: 450px;
+    width: 500px;
+  }
+  
+ 
+  .portfolio-info {
+    width: 500px;
+
+  }
+  .teamImg {
+    height: 430px;
+  }
+  .all-teamIcon {
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  .teamIcon {
+    padding: 10px;
+  }
+  
+ 
+  
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .usefulLink-services {
+    padding-top:20px ;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+ 
+  }
+ 
+@media (max-width:614px) {
+  .portfolioImage {
+    height: 450px;
+   width: 100%;
+  }
+  .portfolio-info {
+   width: 100%;
+
+  }
+}
+@media (max-width:599px) {
+  .wallpaperIllustration {
+    width: 400px;
+  }
+  .wallpaperIllustration > img {
+    width: 100%;
+  }
+  .aboutrightImg {
+    width: 450px;
+  }
+  .aboutleftImg  {
+   width: 450px;
+  }
+ 
+  .clientImg {
+    height: 100%;
+    width: 450px;
+  }
+ 
+  
+}
+@media (max-width:449px) {
+  .wallpaper {
+    /* padding: 170px 50px; */
+  }
+  .wallpaperIllustration {
+    width: 350px;
+  }
+  .aboutrightImg, .aboutleftImg  {
+    height: 300px;
+    width: 320px;
+
+  }
+   .aboutsection, .footer  {
+    padding: 50px;
+  }
+  .testimonialWrap, .portfolioWrap, .teamWrap, .pricingWrap,  .blogWrap, .logos, .serviceTexts {
+    padding: 30px 50px;
+  }
+ .contactWrap {
+    padding: 5px 50px;
+  }
+  .aboutLine > h2, .serviceLine > h2,  .testimonialLine > h2,  .portfolioLine > h2,  .pricingLine > h2, .blogLine > h2,  .contactLine > h2 {
+    font-size: 29px;
+  
+  }
+  .aboutright > h3, .aboutleft > h3,  .callToAction > h3 {
+    font-size: 24px;
+  }
+  
+ 
+  
+  .clientText > p > span {
+    font-size: 38px;
+  }
+ 
+  .aboutLine > p, .serviceLine > p, .testimonialLine > p,  .portfolioLine > p, .teamLine > p,  .pricingLine > p,  .teamLine > h2,  .blogLine > p, .contactLine > p {
+    font-size: 16px;
+    padding: 20px;
+  } 
+  
+  
+  .serviceText > h3 {
+    font-size: 20px;
+  }
+ 
+  .serviceText > p, .portfolio-info > p {
+    font-size: 12px;
+  }
+  .aboutright > p, .callToAction > p,.eachTestimonial > p {
+    font-size: 18px;
+    
+  }
+  
+  .wrap > h3 {
+    font-size: 15px;
+  }
+  .wrap > h4 {
+    font-size: 12px;
+    
+  } 
+ 
+  .pricing-item > h4 {
+    font-size: 48px;
+   
+  }
+  .faq-title {
+   
+    padding: 20px 50px 20px 20px;
+    
+  }
+  .faqRight > h3 {
+   
+    font-size: 32px;
+    
+  }
+ 
+  .faqRight > p {
+    font-size: 15px;
+    padding: 20px;
+    
+  }
+  
+  
+  .faq-title {
+    
+    font-size: 15px;
+   
+  }
+  .faq-title > h3 > span {
+    font-size: 18px;
+  }
+ .eachBlog > p {
+    font-size: 14px;
+   
+  }
+
 }

@@ -50,6 +50,21 @@
         <a href="#contact">Contact</a>
       </div>
     </header>
+    <div class="bar" onclick="barkick()">
+      <img src="Assets/bars-solid.svg" alt="">
+    </div>
+    <div class="cancel" onclick="closekick()">
+      <img src="Assets/xmark-solid.svg" alt="">
+    </div>
+    <div class="side-solid">
+      <a class="active2" href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#service">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#team">Team</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
 
     <!-- header ends  -->
 
@@ -169,10 +184,10 @@
       <div class="logo">
         <img id="img4" src="clients/client-4.png" alt="" />
       </div>
-      <div class="logo">
+      <div class="logo" id="hide-logo">
         <img id="img5" src="clients/client-5.png" alt="" />
       </div>
-      <div class="logo">
+      <div class="logo" id="hide-logo">
         <img id="img6" src="clients/client-6.png" alt="" />
       </div>
     </div>
@@ -341,7 +356,7 @@
                    
                 <p id="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium voluptatem molestias quasi minima quod sint totam ducimus perspiciatis laborum officia!</p>
          </div>
-         <div class="eachTestimonial">
+         <div class="eachTestimonial" id="eachTestimonial-hide">
             <div class="headTestimonial">
                 <div class="imageTestimonial">
                     <img id="testimonialImg2"  src="Assets/testimonials/testimonials-2.jpg" alt="">
@@ -372,7 +387,7 @@
 
                 <p id="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium voluptatem molestias quasi minima quod sint totam ducimus perspiciatis laborum officia!</p>
          </div>
-         <div class="eachTestimonial">
+         <div class="eachTestimonial" id="eachTestimonial-hide" >
            <div class="headTestimonial">
             <div class="imageTestimonial">
                 <img  id="testimonialImg3" src="Assets/testimonials/testimonials-3.jpg" alt="">
@@ -760,9 +775,13 @@
 <div class="faq">
   <div class="faqWrap">
     <div class="faqRight">
-      <h3>Frequently <br> Asked <br><strong>Question</strong></h3>
-      <p>Lorem ipsum, dolor sit amet <br>
+     <h3 id="h3"><li>Frequently </li>
+    <li> Asked </li>
+   <li><strong> Question</strong></li></h3>
+      <p id="faq-p1">Lorem ipsum, dolor sit amet <br>
    consectetur adipisicing elit. Id <br> officia rem nostrum architecto <br> reprehenderit ad suscipit?  eius <br> dolorum!</p>
+
+   <p id="faq-p2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. officia rem nostrum architecto Lorem ipsum dolor sit amet. <br> reprehenderit ad suscipit?  eius dolorum!</p>
     </div>
     <div class="faqleft">
       <article class=" questions">
@@ -1030,6 +1049,7 @@
   </div>
 </div>
     </div>
+    <!-- <div class="usefulLink-services"> -->
     <div class="second-row">
       <h3>Useful links</h3>
       <div class="footer-links">
@@ -1066,6 +1086,7 @@
   <li><span>Email:</span> info@example.com</li>
 </div>
     </div>
+    <!-- </div> -->
   </div>
 
 <div class="copyright">
